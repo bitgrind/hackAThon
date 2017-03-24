@@ -1,13 +1,13 @@
 import java.util.List;
 import java.util.ArrayList;
 
-public class HackMember {
+public class HackMember{
   private String mName;
   private String mLanguage;
   private String mTeam;
 
   public HackMember(String name, String language){
-    nName = name;
+    mName = name;
     mLanguage = language;
   }
 

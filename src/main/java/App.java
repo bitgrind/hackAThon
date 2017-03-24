@@ -13,17 +13,18 @@ public class App {
 
     get("/", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      model.put("teamList", "templates/team-list.vtl");
+      model.put("teamAdd", "templates/team-add.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    post("/", (request, response) -> {
+    post("/teams", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       String teamName = request.queryParams("teamName");
-      if(teamName){
-        Team newTeam = new Team(teamName);
-      }
-      model.put("teamList", "templates/team-list.vtl");
+      HackTeam newTeam = new HackTeam(teamName);
+      ArrayList<HackTeam> teamListing = newTeam.allTeams();
+      model.put("newTeam", "templates/team-list.vtl");
+      model.put("teamList", "templates/team-add.vtl");
+      model.put("teamListing", teamListing);
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 

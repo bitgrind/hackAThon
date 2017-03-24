@@ -8,8 +8,12 @@
     <!--begin main template-->
     <div class="container">
       <h1>Welcome To Hack A Thon!</h1>
-      #parse( $teamList )
-
+      #if($newTeam)
+        #parse( $newTeam )
+        #parse( $teamList )
+      #else
+        #parse( $teamAdd )
+      #end
     </div>
     <!--end main template-->
   </body>
