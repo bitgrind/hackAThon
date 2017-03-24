@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Task Manager!</title>
+    <title>Hack A Thon!</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='/css/styles.css'>
   </head>
   <body>
     <!--begin main template-->
     <div class="container">
       <h1>Welcome To Hack A Thon!</h1>
+      #if($getTeam)
+        #parse( $getTeam )
+        #parse($addMember)
+      #else
+      #end
       #if($newTeam)
         #parse( $newTeam )
         #parse( $teamList )

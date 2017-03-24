@@ -1,9 +1,9 @@
 <div class="col-md-6">
-  <h1>Team Listing</h1>
   #if($teamListing)
+    <h1>Team Listing</h1>
     <ul>
       #foreach($team in $teamListing)
-        <li><a href="/team/$team.getId()">$team.getName()</a></li>
+        <li><a href="/$team.getId()">$team.getName()</a></li>
       #end
     </ul>
   #else

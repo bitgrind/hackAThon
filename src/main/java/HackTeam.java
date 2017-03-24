@@ -4,33 +4,42 @@ import java.util.ArrayList;
 public class HackTeam {
   private int mId;
   private String mName;
-  private ArrayList<HackMember> teamMembers = new ArrayList<HackMember>();
   private static ArrayList<HackTeam> totalTeams = new ArrayList<HackTeam>();
+  private ArrayList<HackMember> mMembers;
 
 
   public HackTeam(String name){
     mName = name;
     mId = totalTeams.size();
     totalTeams.add(this);
+    mMembers = new ArrayList<HackMember>();
   }
 
-  public void addMember(HackMember member){
-    teamMembers.add(member);
+  public void addMember(HackMember newMember){
+    mMembers.add(newMember);
+  }
+
+  public ArrayList<HackMember> getMembers(){
+    return mMembers;
   }
 
   public static ArrayList<HackTeam> allTeams() {
    return totalTeams;
   }
 
+  public int getId(){
+    return mId;
+  }
+
   public String getName(){
     return mName;
   }
 
-  public ArrayList<HackMember> getMembers(){
-    return teamMembers;
+  public void clear() {
+    mMembers.clear();
   }
 
-  public void clear() {
-    teamMembers.clear();
+  public static HackTeam find(int id) {
+    return totalTeams.get(id);
   }
 }

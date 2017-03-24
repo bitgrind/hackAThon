@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="HackTeamTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2017-03-24T22:40:22" hostname="Epicodus-5A.local" time="0.003">
+  <properties/>
+  <testcase name="HackTeam_HackMemberInHackTeam_true" classname="HackTeamTest" time="0.001"/>
+  <testcase name="HackMember_MemberObj_true" classname="HackTeamTest" time="0.0"/>
+  <testcase name="HackTeam_TeamObj_true" classname="HackTeamTest" time="0.0"/>
+  <testcase name="HackMember_MemberNameMethod_Keith" classname="HackTeamTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
