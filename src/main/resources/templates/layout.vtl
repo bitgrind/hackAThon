@@ -3,12 +3,14 @@
   <head>
     <title>Hack A Thon!</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-    <link rel='stylesheet' href='/css/styles.css'>
+    <link rel='stylesheet' href='styles.css'>
   </head>
   <body>
     <!--begin main template-->
-    <div class="container">
-      <h1>Welcome To Hack A Thon!</h1>
+    <main class="container">
+      <div class="jumbotron">
+        <h1>Welcome To Hack A Thon!</h1>
+      </div>
       #if($getTeam)
         #parse( $getTeam )
         #parse($addMember)
@@ -20,7 +22,8 @@
       #else
         #parse( $teamAdd )
       #end
-    </div>
+    </main>
+    <footer></footer>
     <!--end main template-->
   </body>
 </html>
