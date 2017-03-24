@@ -1,0 +1,24 @@
+<div>
+  <h1>Register A Team!</h1>
+  <div class="teamAdd">
+    <form action="/" method="POST">
+      <div>
+        <label>Enter a Team Name</label>
+        <input id="teamName" name="teamName" type="text">
+      </div>
+      <input type="submit">
+    </form>
+  </div>
+</div>
+<div class="">
+  <h1>Team Listing</h1>
+  #if($teamList)
+    <ul>
+      #foreach($team in $teamList)
+        <li><a href="/team/$team.getId()">$team.getName();</a></li>
+      #end
+    </ul>
+  #else
+    <h2>No teams</h2>
+  #end
+</div>

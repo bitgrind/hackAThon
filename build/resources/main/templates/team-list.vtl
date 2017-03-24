@@ -1,0 +1,10 @@
+<h1>Team Listing</h1>
+  #if($teamList)
+    <ul>
+      #foreach($team in $teamList)
+        <li><a href="/team/$team.getId()">$team.getName();</a></li>
+      #end
+    </ul>
+  #else
+    <h2>No teams</h2>
+  #end
